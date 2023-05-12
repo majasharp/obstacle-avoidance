@@ -1,0 +1,103 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/samples/contests/robocup/protos/RobocupSoccerField.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/balls/protos/RobocupSoccerBall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/robotis/darwin-op/protos/RobotisOp3.proto"
+
+WorldInfo {
+  info [
+    "Description: official soccer simulation for the 2021 Robocup Virtual Humanoid League (kid size)"
+    "Version 0.2"
+  ]
+  title "Robocup V-HL Kid"
+  basicTimeStep 8
+  optimalThreadCount 8
+  physicsDisableTime 0.1
+  physicsDisableLinearThreshold 0.1
+  physicsDisableAngularThreshold 0.1
+  contactProperties [
+    ContactProperties {
+      material1 "grass"
+      coulombFriction [
+        0.5
+      ]
+      softCFM 0.03
+    }
+    ContactProperties {
+      material1 "grass"
+      material2 "robocup soccer ball"
+      coulombFriction [
+        0.5
+      ]
+      bounce 0.76
+      softCFM 0.05
+    }
+    ContactProperties {
+      material2 "robocup soccer ball"
+      bounce 0.76
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.021438044090059474 -0.3677174983216814 -0.9296904063685055 5.177081179565023
+  position -10.829177640156779 -15.868241823623606 11.024397525850295
+}
+TexturedBackground {
+  texture "stadium_dry"
+}
+TexturedBackgroundLight {
+  texture "stadium_dry"
+}
+RobocupSoccerField {
+  size "kid"
+}
+RobotisOp3 {
+  hidden position_5_0 0.00013178275303798393
+  hidden position_5_1 -0.0001317848661494063
+  hidden position_5_2 -7.692187659190102e-08
+  hidden position_5_3 7.696517232224817e-08
+  hidden position_5_4 -6.219505614648722e-09
+  hidden rotation_6 0 0 -1 0.00013178275254011298
+  hidden position_6_0 -0.00021508100185485546
+  hidden rotation_7 1 0 0 0.00021508100284029698
+  hidden position_7_0 -0.0001143998793251555
+  hidden rotation_8 0 -1 0 0.0001143998781052172
+  hidden position_8_0 -5.983492342368326e-05
+  hidden rotation_9 0 -0.9999999999999999 0 5.9834922078919725e-05
+  hidden position_9_0 -5.957316767787979e-06
+  hidden rotation_10 0 1 0 5.957334411832514e-06
+  hidden position_10_0 -2.770264453388904e-07
+  hidden rotation_11 -1 0 0 2.7637536810325715e-07
+  hidden rotation_12 0 0 1 0.00013178486542436582
+  hidden position_12_0 0.00021508364891995014
+  hidden rotation_13 -1 0 0 0.00021508364983774124
+  hidden position_13_0 0.00011440493221789116
+  hidden rotation_14 0 -1 0 0.00011440493223105214
+  hidden position_14_0 5.9836477736453276e-05
+  hidden rotation_15 0 -1 0 5.9836480659030746e-05
+  hidden position_15_0 5.954325264173916e-06
+  hidden rotation_16 0 1 0 5.954351867131786e-06
+  hidden position_16_0 2.885906516594811e-07
+  hidden rotation_17 1 0 0 2.889442358861168e-07
+  hidden rotation_18 0 -1 0 7.884953353001448e-08
+  hidden position_18_0 1.0938384146366151e-07
+  hidden rotation_19 -1 0 0 1.0745380149674385e-07
+  hidden position_19_0 -2.167414603349016e-08
+  hidden rotation_20 -1 0 0 2.9802322387695313e-08
+  hidden rotation_21 0 -1 0 7.884953353001448e-08
+  hidden position_21_0 -1.0936255367965941e-07
+  hidden rotation_22 1 0 0 1.0745380149674385e-07
+  hidden position_22_0 2.1663299925718896e-08
+  hidden rotation_23 1 0 0 2.9802322387695313e-08
+  hidden position_24_0 9.25602098705356e-09
+  translation -0.00010739069226355959 -0.0003660870202597808 0.2894214039818744
+  rotation -0.10877140255025315 -0.9938037630494321 -0.022866187614882745 0.0003798884231165719
+  name "robot"
+  controller "<extern>"
+}
+RobocupSoccerBall {
+  translation -0.00014858430216192206 -0.0003748171452339216 0.09009364169670636
+  rotation -0.008384487918514169 -0.9999614544719037 -0.0026057499456423497 0.0020654973706135268
+}
