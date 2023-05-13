@@ -36,7 +36,6 @@ def generate_launch_description():
         ]
     )
 
-
     obstacle_avoider = Node(
         package='my_package',
         executable='obstacle_avoider',
